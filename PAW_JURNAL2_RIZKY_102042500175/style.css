@@ -1,0 +1,289 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: #f3f5f7;
+    color: #1e293b;
+    font: 16px/1.6 Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+main {
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 28px;
+    background: transparent;
+}
+
+/* Navigasi Utama */
+.navigasi {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: white;
+    border: 1px solid #d4dce3;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+.nav-brand {
+    font-weight: bold;
+    color: #183b56;
+    margin-right: 18px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-link {
+    color: #165b87;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.nav-link:hover, .nav-link.active {
+    background: #eef3f7;
+    color: #0f3d59;
+}
+
+/* Tipografi & Heading */
+h1 { font-size: 32px; line-height: 1.2; margin: 8px 0 12px; color: #0f172a; }
+h2 { font-size: 20px; line-height: 1.3; margin: 12px 0 8px; color: #1e293b; }
+.label { color: #526477; font-size: 12px; letter-spacing: 1px; margin: 0 0 6px 0; font-weight: bold; }
+a { color: #165b87; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Pesan Notifikasi & Validasi */
+.pesan {
+    border-left: 4px solid #165b87;
+    padding: 14px 18px;
+    background: white;
+    margin: 16px 0;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.kesalahan {
+    border-left: 4px solid #a32f2f;
+    padding: 14px 18px;
+    background: white;
+    color: #a32f2f;
+    margin: 16px 0;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Formulir */
+label { display: block; margin-top: 16px; margin-bottom: 4px; font-weight: bold; font-size: 14px; }
+input, select, textarea {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 12px;
+    border: 1px solid #9caab7;
+    border-radius: 4px;
+    font: inherit;
+    background: white;
+    box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: #165b87;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(22, 91, 135, 0.15);
+}
+textarea { resize: vertical; min-height: 110px; }
+
+/* Tombol */
+button, .tombol {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 16px;
+    margin-right: 8px;
+    background: #183b56;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+button:hover, .tombol:hover {
+    background: #0f283c;
+    text-decoration: none;
+}
+.tombol-outline {
+    background: white;
+    color: #183b56;
+    border: 1px solid #9caab7;
+}
+.tombol-outline:hover {
+    background: #f1f5f9;
+}
+.bahaya {
+    background: #a32f2f;
+    color: white;
+}
+.bahaya:hover {
+    background: #802222;
+}
+
+/* Bilah Pencarian & Filter */
+.pencarian {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    background: white;
+    padding: 16px 20px;
+    border: 1px solid #d4dce3;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+.pencarian input {
+    flex: 1 1 240px;
+    max-width: none;
+    margin: 0;
+}
+.pencarian select {
+    flex: 0 1 240px;
+    max-width: none;
+    margin: 0;
+}
+.pencarian button {
+    margin: 0;
+}
+.pencarian a {
+    padding: 9px 16px;
+    border: 1px solid #9caab7;
+    border-radius: 4px;
+    background: white;
+    color: #183b56;
+    font-size: 14px;
+    text-decoration: none;
+}
+.pencarian a:hover {
+    background: #f1f5f9;
+}
+
+/* Tabel Data */
+.tabel-wadah {
+    overflow-x: auto;
+    margin-top: 18px;
+    background: white;
+    border: 1px solid #d4dce3;
+    border-radius: 4px;
+}
+.tabel-data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.tabel-data th {
+    background: #f8fafc;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 2px solid #e2e8f0;
+    color: #334155;
+    font-weight: 600;
+}
+.tabel-data td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #1e293b;
+    vertical-align: middle;
+}
+.tabel-data tr:last-child td {
+    border-bottom: 0;
+}
+.tabel-data tr:hover {
+    background: #f9fbfd;
+}
+
+/* Aksi Tautan / Tombol dalam Tabel */
+.aksi-grup {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.btn-aksi {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid #9caab7;
+    background: white;
+    color: #183b56;
+}
+.btn-aksi:hover {
+    background: #eef3f7;
+    text-decoration: none;
+}
+.btn-aksi.hapus {
+    background: #a32f2f;
+    border-color: #a32f2f;
+    color: white;
+}
+.btn-aksi.hapus:hover {
+    background: #802222;
+}
+
+/* Kartu Ringkasan / Beranda */
+.kartu-ringkasan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin: 24px 0;
+}
+.kartu {
+    background: white;
+    border: 1px solid #d4dce3;
+    border-radius: 6px;
+    padding: 20px;
+}
+.kartu .angka {
+    font-size: 32px;
+    font-weight: bold;
+    color: #183b56;
+    margin-bottom: 4px;
+}
+.kartu .judul-kartu {
+    font-size: 14px;
+    color: #526477;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Kartu Detail & List */
+article, .kartu-detail {
+    background: white;
+    border: 1px solid #d4dce3;
+    border-radius: 6px;
+    padding: 24px;
+    margin-top: 18px;
+}
+dt { font-weight: bold; color: #526477; font-size: 14px; margin-top: 12px; }
+dd { margin: 4px 0 16px 0; font-size: 16px; color: #0f172a; }
+
+/* Status Badges */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+.badge-draf { background: #e2e8f0; color: #475569; }
+.badge-aktif { background: #dcfce7; color: #166534; }
+.badge-selesai { background: #dbeafe; color: #1e40af; }
+
+/* Box kosong */
+.kosong {
+    background: white;
+    border: 1px dashed #cbd5e1;
+    padding: 32px;
+    text-align: center;
+    border-radius: 6px;
+    color: #64748b;
+    margin-top: 18px;
+}
